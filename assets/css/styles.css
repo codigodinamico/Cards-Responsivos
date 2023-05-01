@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    background-color: #fff;
+    color: #000;
+}
+ul{
+    list-style: none;
+}
+.conteiner{
+    max-width: 1024px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.grid{
+    display: grid;
+}
+.card{
+    padding: 48px;
+    width: 70%;
+    margin: auto;
+}
+.card-conteiner{
+    gap: 48px 20px;
+}
+.card-content{
+    position: relative;
+    background-color: #fafafa;
+    padding: 32px 20px 32px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px #0000004a;
+    transition: .4s;
+}
+.card-content:hover{
+    box-shadow: 0 16px 24px #0000004a;
+}
+.card-title{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+.card-price{
+    text-align: center;
+    color: #4bb4ff;
+    font-size: 35px;
+}
+.month{
+    font-size: 16px;
+}
+.card-list{
+    row-gap: 12.8px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.list-item{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #464646;
+}
+.icon{
+    color: #000;
+    margin-right: 4px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.card-button{
+    padding: 20px;
+    margin-top: 15px;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    background: linear-gradient(157deg, #0091f9, #5ebcff);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .4s;
+}
+.card-button:hover{
+    box-shadow: 0 2px 5px #007ff55e;
+}
+.premium .ribbon{
+    height:  150px;
+    width:  150px;
+    position: absolute;
+    top: -13px;
+    left: -13px;
+    text-align: start;
+    overflow: hidden;
+}
+.premium .ribbon::before,
+.premium .ribbon::after{
+    position: absolute;
+    content: " ";
+    display: block;
+    border: 7px solid #000742;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+.premium .ribbon::before{
+    top: 0;
+    right: 30px;
+}
+.premium .ribbon::after{
+    bottom: 30px;
+    left: 0;
+}
+.premium .ribbon span{
+    position: absolute;
+    background: linear-gradient(157deg, #0091f9, #5ebcff);
+    width: 200px;
+    padding: 10px 0;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    top: 20px;
+    right: 0;
+    text-transform: uppercase;
+    transform: rotate(-45deg);
+}
+@media screen and(max-width: 320px){
+    .conteiner{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .card-content{
+        padding: 32px 20px;
+        border-radius: 16px;
+    }
+}
+@media screen and (min-width: 568px){
+    .card-conteiner{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-content{
+        grid-template-rows: repeat(2, max-content);
+    }
+    .card-button{
+        align-self: flex-end;
+    }
+}
+@media screen and (min-width: 968px){
+    .conteiner{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card{
+        height: 100vh;
+        width: 100%;
+        align-items: center;
+    }
+    .card-content{
+        margin-left: 15px;
+    }
+    .card-conteiner{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
